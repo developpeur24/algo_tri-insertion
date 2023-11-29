@@ -1,0 +1,37 @@
+ALGORITHM algorithm_tri
+VAR
+    n : ARRAY_OF INTEGER[5];
+    i, j, tmp : INTEGER
+BEGIN
+    FOR i FROM 0 TO n - 1 DO
+        tmp = 0
+    FOR j FROM i+1 TO n - 1 DO
+        IF (tab[i]­>tab[j]) THEN
+            tmp :  tab[i]
+            tab[i] :  tab[j]
+            tab[j] :  tmp
+        END_IF
+    END FOR    
+END
+
+
+
+
+
+
+
+
+
+
+
+
+ALGORITHM tri_par_insertion(arr):
+    n = longueur(arr)
+    FOR i de 1 à n-1 DO:
+        élément_mémorisé = arr[i]
+        j = i-1
+        WHILE j >= 0 et arr[j] > élément_mémorisé DO:
+            arr[j + 1] = arr[j]
+            j = j - 1
+        END WHILE
+        arr[j + 1] = élément_mémorisé
